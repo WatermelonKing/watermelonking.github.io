@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>PQ - My Docs</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+	
+	<script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">My Docs</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../Linux/Ubuntu_iso/">Ubuntu iso</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">PQmagic <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li class="active">
+    <a href="./">PQ</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../../Linux/Ubuntu_iso/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#pqmagic">PQmagic磁盘分区教程</a></li>
+            <li><a href="#_1">一、创建一个新的分区</a></li>
+            <li><a href="#_2">二、调解分区容量</a></li>
+            <li><a href="#_3">三、分区格式转换</a></li>
+            <li><a href="#_4">四、归并分区</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="pqmagic">PQmagic磁盘分区教程</h1>
+<div class="toc">
+<ul>
+<li><a href="#pqmagic">PQmagic磁盘分区教程</a><ul>
+<li><a href="#_1">一、创建一个新的分区</a></li>
+<li><a href="#_2">二、调解分区容量</a></li>
+<li><a href="#_3">三、分区格式转换</a></li>
+<li><a href="#_4">四、归并分区</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="_1">一、创建一个新的分区</h2>
+<p><img alt="img" src="../img/1.jpg" /></p>
+<p>思绪：咱们把E盘分出10G给一个新分区。 
+在软件窗口左面任务栏中选择创建一个新的分区 </p>
+<p><img alt="img" src="../img/2.jpg" /></p>
+<p>点下一步，会出现创建新分区的位置选择，一般咱们选择在最后一个分区的后面，即在E盘然后</p>
+<p><img alt="img" src="../img/3.jpg" /></p>
+<p>下一步，会出现削减哪个分区的空间，咱们选择E盘 </p>
+<p><img alt="img" src="../img/4.jpg" /></p>
+<p>下一步，选择创建的新分区大小和格式 </p>
+<p><img alt="img" src="../img/5.jpg" /></p>
+<p><img alt="img" src="../img/6.jpg" /></p>
+<p>下一步 </p>
+<p><img alt="img" src="../img/7.jpg" /></p>
+<p>点完成，应用。出现以下界面 </p>
+<p><img alt="img" src="../img/8.jpg" /></p>
+<p><img alt="img" src="../img/9.jpg" /></p>
+<p>点确定，会重启计算机，并出现以下界面</p>
+<p><img alt="img" src="../img/10.jpg" /></p>
+<p>完成后再重启，会看到多了一个新分区，G盘</p>
+<p><img alt="img" src="../img/11.jpg" /></p>
+<p>注：因为有光驱占用盘符F，以是新创建的分区盘符是G，你可以在系统的磁盘办理中把盘符调解过来。调解过程咱们就不讲了。 </p>
+<h2 id="_2">二、调解分区容量</h2>
+<p>思绪：咱们要把D盘容量调小，从其中划出10G容量给G盘。 
+在软件窗口左面任务栏中选择调解一个分区的容量 </p>
+<p><img alt="img" src="../img/12.jpg" /></p>
+<p>下一步</p>
+<p><img alt="img" src="../img/13.jpg" /></p>
+<p>选择需要调解容量的D盘，下一步，会出现指定分区的新容量</p>
+<p><img alt="img" src="../img/14.jpg" /></p>
+<p><img alt="img" src="../img/15.jpg" /></p>
+<p>指定好D盘新容量后，下一步，会出现把骈枝的空间给哪一个分区</p>
+<p><img alt="img" src="../img/16.jpg" /></p>
+<p>选择G盘，下一步</p>
+<p><img alt="img" src="../img/17.jpg" /></p>
+<p>点完成，应用。还会出现重启，重启后看看容量是否变样了？</p>
+<p><img alt="img" src="../img/18.jpg" /></p>
+<h2 id="_3">三、分区格式转换</h2>
+<p>思绪：咱们把G盘从NTFS格式转换成FAT32格式。 
+起首选中G盘 </p>
+<p><img alt="img" src="../img/19.jpg" /></p>
+<p>点击菜单 分区--转换</p>
+<p><img alt="img" src="../img/20.jpg" /></p>
+<p>确定</p>
+<p><img alt="img" src="../img/21.jpg" /></p>
+<p>确定</p>
+<p><img alt="img" src="../img/22.jpg" /></p>
+<p>点应用，重启后便可完成格式转换。</p>
+<h2 id="_4">四、归并分区</h2>
+<p>思绪：把E盘和G盘归并成一个分区。 
+在软件窗口左面任务栏中选择归并分区 </p>
+<p><img alt="img" src="../img/23.jpg" /></p>
+<p>下一步，会出现选择要归并的头个分区，咱们选择E盘 </p>
+<p><img alt="img" src="../img/24.jpg" /></p>
+<p>下一步，会出现选择要归并的第二个分区，咱们选择G盘</p>
+<p><img alt="img" src="../img/25.jpg" /></p>
+<p>下一步，会出现选择输入一个文件夹名称，用来生成第二个分区的数值，为易于影象咱们在这搭文件夹名为G</p>
+<p><img alt="img" src="../img/26.jpg" /></p>
+<p><img alt="img" src="../img/27.jpg" /></p>
+<p>下一步，会出现驱动盘符更改</p>
+<p><img alt="img" src="../img/28.jpg" /></p>
+<p>下一步，会出现确认归并 </p>
+<p><img alt="img" src="../img/29.jpg" /></p>
+<p>点完成，再点应用，就会出现会话框，确认、重启就完成了分区的归并。 
+重启后咱们会发明本来的G盘没有了，而容量都到了E盘 </p>
+<p><img alt="img" src="../img/30.jpg" /></p>
+<p>再看看E盘内，多了个名称为G的文件夹，内里是本来G盘的数值 </p>
+<p><img alt="img" src="../img/31.jpg" /></p>
+<p>注重事项： </p>
+<p>1.连结电源稳定 ：
+PQ典型长处是不损坏硬盘数值而对硬盘进行分区、归并分区、转换分区格式等操作。这些个操作无疑要涉及大量数值在硬盘分区间盘运，而盘运中转站就是物理内存(ROM部门)和虚拟内存，但物理内存(ROM部门)和虚拟内存却有一个天赋致命弱点：一朝掉去供电，所存储的数值便会消掉的一干二净，是以运行PQ时必须连结电源稳定。 </p>
+<p>2.谨慎硬盘分区系统格式转换操作 
+使用PQ可利便、快捷地使成为事实几种文件系统格式的转换，但在转换以前应注重： </p>
+<p>a.FAT分区是DOS，Windows 3.1，Windows 95/98可以使用的；FAT32分区是Windows 95 OSR2，Windows 98，Windows NT5.0可以使用的；NTFS则由Windows NT系列专用；HPFS是OS2系统使用的。高一级的操作系统往往可以兼容低一级分区系统格式，而低一级的操作系统无法使用高一级的分区系统格式。 </p>
+<p>b.大都步伐不会受从FAT16转换为FAT32(或NTFS)的影响，但是FAT32(或NTFS)格式对于一些倚赖于纯FAT16格式的软件(如磁盘实用步伐PCTOOLS 9.0、Norton 95等)不能大好地支持。要使用这些个软件需要将FAT32再转换回FAT16格式或者进级这些个实用步伐到最新版本或下载使这些个软件与FAT32(或NTFS)相兼容的补钉。 </p>
+<p>c.由于FAT16文件系统的局限性，一个FAT16格式的分区最大容量是2473.2M。对一个超过2GB的分区进行FAT32转换为FAT操作时，可能会出现盘符杂乱且该分区不可读。用PM查看，预示Stack Overflow(仓库溢出)的错误信息。修改错误可试着运行Fdisk，把出错的逻辑分区删去，再重修逻辑分区。 </p>
+<p>d.转换为FAT32的分区容量不能小于256M；若将一个FAT32分区转换为FAT格式，必须保证至少有300-400M的自由空间。否则可能引起硬盘数值丢掉。 </p>
+<p>e.文件系统格式可以使成为事实硬盘上的特定空间和文件对特定用户开放，其他用户遭到步入或读写职权范围*。但一朝转换为FAT16或FAT32，硬盘上的所有空间和文件将对所有用户开放；同时在NFTS下对部门文件设置的特殊文件属性也将消掉。 </p>
+<p>3.归并分区要小心 
+PQ可以将一个硬盘上相邻的系统格式相同的两个分区合二为一。这项功效对于两个分区自由空间都所剩无几，而又需要一块领有较大自由空间的分区出格有用。 
+归并分区操作要花费较长的时间。若两个分区较大且分区内数值较多，归并操作可能要用上数个钟头之久，进度至关迟缓，有时候会给人以“死机”的错觉。 
+使用PQ归并两个分区一定要有耐心才行，运出发的日期间绝对不允许有因等不及或误认为“死机”而封闭或重启计算机和断电环境的发生。此类事情一朝发生，等你步入计算机时会发明要归并的两个分区被冠以“PQFLEX”的巻标而且分区预示为“PqRP”文件系统格式(究竟上并不是是一种文件系统格式，而是间断PQ后产生的一种不稳定文件格式状况)，或分区及此中的数值丢掉，甚至根本就无法步入计算机。 </p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

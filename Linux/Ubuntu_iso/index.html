@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Ubuntu iso - My Docs</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+	
+	<script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">My Docs</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li class="active">
+    <a href="./">Ubuntu iso</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">PQmagic <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../PQmagic/PQ/">PQ</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../..">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../../PQmagic/PQ/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#win7-ubuntu-u">Win7 装 Ubuntu 双系统，不需要U盘</a></li>
+            <li><a href="#1">1.准备：</a></li>
+            <li><a href="#2easybcd">2.EasyBCD设置启动引导：</a></li>
+            <li><a href="#3">3.按提示步骤安装</a></li>
+            <li><a href="#4">4.参考</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="win7-ubuntu-u">Win7 装 Ubuntu 双系统，不需要U盘</h1>
+<div class="toc">
+<ul>
+<li><a href="#win7-ubuntu-u">Win7 装 Ubuntu 双系统，不需要U盘</a><ul>
+<li><a href="#1">1.准备：</a></li>
+<li><a href="#2easybcd">2.EasyBCD设置启动引导：</a></li>
+<li><a href="#3">3.按提示步骤安装</a></li>
+<li><a href="#4">4.参考</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="1">1.准备：</h2>
+<p>Ubuntu系统ISO文件。</p>
+<p>EasyBCD 软件。 </p>
+<h2 id="2easybcd">2.EasyBCD设置启动引导：</h2>
+<p>打开EasyBCD，添加新条目，NeoGrub，安装。然后点击，配置。在出现的menu.lst最后输入以下内容：</p>
+<p><img alt="img" src="../img/2.jpg" /></p>
+<pre><code>title Install Ubuntu
+root (hd0,0)
+kernel (hd0,0)/vmlinuz boot=casper iso-scan/filename=/ubuntu-14.10-desktop-i386.iso ro quiet splash locale=zh_CN.UTF-8
+initrd (hd0,0)/initrd.lz
+</code></pre>
+
+<p>其中，红色的是你要安装的系统ISO文件名称。绿色的，对有的电脑第一个盘符不是C盘的需要修改。
+查看C盘是不是hd(0,0)，可以在win7的磁盘管理中查看，不要看上面的列表，
+看下面以方块状显示的地方，从左往右数，以0开始，数到C盘是几就是几哟.</p>
+<p>打开ISO文件，将casper文件下的initrd.lz和vmlinuz拷到C盘根目录，以及将.disk文件夹拷到C盘根目录。</p>
+<p>重启。选择 NeoGrub。</p>
+<p>进入后，按Ctrl +Alt+T打开终端，输入代码：sudo umout -l /isodevice，取消对光盘所在驱动器的挂载。
+中间的-l是小写的L。可多执行几次，后面可能提示未挂载了。</p>
+<h2 id="3">3.按提示步骤安装</h2>
+<p><img alt="img" src="../img/3.jpg" />
+<img alt="img" src="../img/4.jpg" />
+<img alt="img" src="../img/5.jpg" />
+<img alt="img" src="../img/6.jpg" />
+<img alt="img" src="../img/7.jpg" /></p>
+<h2 id="4">4.参考</h2>
+<p>0.http://blog.csdn.net/lvanneo/article/details/16885121   主要可参考该文，较详细。但其中编辑menu.lst那个地方作者给出的内容有误，可能是多了空格。</p>
+<p>1.http://www.linuxidc.com/Linux/2014-10/108430.htm      该篇文章主要是安装的最新的Ubuntu-14.10</p>
+<p>2.http://blog.csdn.net/jueblog/article/details/16972635    该篇文章在Ubuntu分区那块儿可参考。
+感谢以上三位作者。</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
