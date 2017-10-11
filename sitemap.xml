@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-08-21</lastmod>
+     <lastmod>2017-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>/Linux/Ubuntu_iso/</loc>
-     <lastmod>2017-08-21</lastmod>
+     <lastmod>2017-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,7 +20,15 @@
     
     <url>
      <loc>/PQmagic/PQ/</loc>
-     <lastmod>2017-08-21</lastmod>
+     <lastmod>2017-10-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/Django/Django/</loc>
+     <lastmod>2017-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
